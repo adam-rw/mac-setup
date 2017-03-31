@@ -1,8 +1,10 @@
 
-
-# Assumes the following installed via home brew:
+# Assumes the code dir as ~/Code and that the following are installed via home brew:
 # git, tree, ncdu
+#
 # author: Adam Williams <adam.williams@linux.com>
+
+source ~/.work_specific
 
 alias ll='ls -lhA'
 alias du='ncdu'
