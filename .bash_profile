@@ -1,4 +1,25 @@
-alias code='cd ~/Code'
+
+
+# Assumes the following installed via home brew:
+# git, tree, ncdu
+# author: Adam Williams <adam.williams@linux.com>
+
+alias ll='ls -lhA'
+alias du='ncdu'
+
+function repos() {
+    cd ~/Code/$1
+    tree
+}
+
+function tree() {
+    if [ -z "$1" ]; then
+        level="1"
+    else
+        level="${1}"
+    fi
+    command tree -hFCa -L $level --du
+}
 
 source /usr/local/etc/bash_completion.d/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-prompt.sh
